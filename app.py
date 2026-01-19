@@ -9,8 +9,8 @@ st.set_page_config(page_title="TruthGuard AI", page_icon="🛡️", layout="wide
 # Load Model & Vectorizer
 @st.cache_resource
 def load_model():
-    model = joblib.load('models/model.pkl')
-    vectorizer = joblib.load('models/vectorizer.pkl')
+    model = joblib.load('model.pkl')
+    vectorizer = joblib.load('vectorizer.pkl')
     return model, vectorizer
 
 try:
@@ -83,4 +83,5 @@ with col2:
     st.caption("- true.csv: Reuters & Verified Sources")
     
     st.divider()
+
     st.write("please provide ***full  detailed correct lengthy news in paragraph formaat to better understand for ai*** to check whether it is fake or real news")
